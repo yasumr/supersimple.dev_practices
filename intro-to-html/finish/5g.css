@@ -1,0 +1,25 @@
+p {
+  font-family: Arial;
+  font-size: 24px;
+  margin: 0;
+  width: 800px;
+}
+
+.name {
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.address {
+  font-weight: normal;
+  color: gray;
+}
+
+.description {
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+
+.chp {
+  color: lightblue;
+}

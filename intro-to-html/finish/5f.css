@@ -1,0 +1,28 @@
+p {
+  font-family: Arial;
+  font-size: 40px;
+  margin: 0 20px;
+}
+
+.price {
+  font-size: 80px;
+  margin-bottom: 18px;
+}
+
+.usd {
+  font-size: 40px;
+  color: gray;
+}
+
+.difference {
+  color: green;
+  margin-bottom: 18px;
+}
+
+.after {
+  color: gray;
+}
+
+.dif-red {
+  color: red;
+}

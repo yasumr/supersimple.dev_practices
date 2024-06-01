@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      p {
+        font-family: Roboto, Arial;
+        margin: 0;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 200px 200px 200px;
+        column-gap: 24px;
+      }
+
+      .container {
+        width: 100%;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+        margin-right: 15px;
+      }
+
+      .profile-picture {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        margin-bottom: 8px;
+      }
+
+      .name {
+        font-size: 20px;
+        font-weight: bold;
+        margin-left: 10px;
+        margin-bottom: 4px;
+      }
+
+      .info {
+        margin-bottom: 10px;
+      }
+
+      .icon-picture {
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+        vertical-align: middle;
+        margin-left: 10px;
+
+      }
+
+      .mutual-friend {
+        color: gray;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      .button {
+        background-color: rgb(0, 123, 255);
+        color: white;
+        border: none;
+        border-radius: 6px;
+        padding: 10px 18px;
+        margin-left: 10px;
+        margin-bottom: 20px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="container">
+        <img class="profile-picture" src="animal-4540649_640.jpg">
+        <p class="name">Oliver</p>
+        <div class="info">
+          <img class="icon-picture" src="animal-4540649_640.jpg">
+          <p class="mutual-friend">2 mutual friends</p>
+        </div>
+        <button class="button">Add Friend</button>
+      </div>
+      <div class="container">
+        <img class="profile-picture" src="cat-3537118_640.jpg">
+        <p class="name">Mimi</p>
+        <div class="info">
+          <img class="icon-picture" src="cat-3537118_640.jpg">
+          <p class="mutual-friend">3 mutual friends</p>
+        </div>
+        <button class="button">Add Friend</button>
+      </div>
+      <div class="container">
+        <img class="profile-picture" src="drowsiness-3706330_640.jpg">
+        <p class="name">Rex</p>
+        <div class="info">
+          <img class="icon-picture" src="drowsiness-3706330_640.jpg">
+          <p class="mutual-friend">4 mutual friends</p>
+        </div>
+        <button class="button">Add Friend</button>
+      </div>
+    </div>
+  </body>
+</html>

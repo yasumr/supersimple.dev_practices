@@ -1,0 +1,15 @@
+p {
+  font-family: Montserrat;
+  font-size: 45px;
+  margin: 0;
+  text-align: center;
+}
+
+.model3 {
+  font-size: 100px;
+  font-weight: bold
+}
+
+.touchless {
+  text-decoration: underline;
+}
