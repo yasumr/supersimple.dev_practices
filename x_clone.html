@@ -6,161 +6,335 @@
       body {
         height: 3000px;
         margin: 0;
-        position: relative;
+        background-color: black;
         color: white;
       }
 
-      .center-container {
-        background-color: lightblue;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 598px;
-        margin: 54px 0 0 70px;
+      .outer-container {
+        display: flex;
+        background-color: black;
+        width: 60px;
+        height: 100%;
       }
+
+      /*--------------------------------------Left----------------------------------------------- */
       .sidebar {
         position: fixed;
-        background-color: black;
-        left: 0;
         top: 0;
+        left: 0;
         bottom: 0;
-        width: 70px;
+        width: 60px;
         border-right: 1px solid rgb(47, 51, 54);
-        border-top: 1px solid rgb(47, 51, 54);
-        z-index: 100;
+      }
+
+      .sidebar-icon {
+        display: flex;
+        margin: 24px;
+      }
+
+      .sidebar-icon {
+        width: 26px;
+      }
+
+      .sidebar-icon-special {
+        width: 50px;
+        background-color: rgb(29, 155, 240);
+        margin: 6px;
+      }
+
+      /*--------------------------------------center----------------------------------------------- */
+
+      .center-container {
+        position: absolute;
+        top: 0;
+        left: 61px;
+        height: 100%;
+        width: 598px;
+        background-color: black;
+        border-right: 1px solid rgb(47, 51, 54);
       }
 
       .top-bar {
-        background-color: black;
-        position: fixed;
-        top: 0;
-        left: 70px;
-        height: 54px;
-        width: 598px;
-        border-bottom: 1px solid rgb(47, 51, 54);
         display: flex;
+        height: 54px;
+        border-bottom: 1px solid rgb(47, 51, 54);
       }
 
-      .center-container {
-        position: absolute;
-        background-color: black;
-        top: 54;
-        bottom: 0;
-        left: 70;
-        right: 0;
-        z-index: -1;
-      }
-
-      .top-button {
-        width: 50%;
+      .top-bar button {
         border: none;
         background-color: black;
         color: white;
         font-size: 15px;
         font-weight: bold;
+        width: 50%;
       }
 
-      .create-post-space {
-        background-color: black;
-        position: relative;
-        top: 0;
-        left: 70;
-        height: 157px;
-        z-index: -1;
+      .post-container {
         display: flex;
-        align-items: center;
-      }
-      
-      .create-post-rightspace > p {
-        color: rgb(100, 100, 101);
-        font-size: 20px;
-        padding: 40px 0 0 10px;
+        height: 155px;
+        border-bottom: 1px solid rgb(47, 51, 54);
       }
 
-      .user-icon {
+      .post-box {
+        padding: 14px;
+      }
+
+      .post-box-user-icon {
         width: 40px;
-        height: 100%;
-        margin: -20px 0px 54px 10px;
+        margin: 20px;
       }
 
-      .everyone-can-reply-line {
+      .post-box-text {
+        height: 40px;
+        color: rgb(114, 117, 118);
+        font-size: 18px;
+        margin: 8px 0 0 10px;
+      }
+
+      .everyone-can-reply-container {
         display: flex;
-        border-bottom: 1px solid  rgb(47, 51, 54);
+        height: 30px;
+        align-items: center;
+        border-bottom: 1px solid rgb(47, 51, 54);
+      }
+      .earth-icon,
+      .post-space-icon {
+        width: 16px;
+        padding: 10px;
       }
 
-      .everyone-can-reply-line p {
+      .everyone-can-reply-container p {
         color: rgb(29, 155, 240);
         font-size: 12px;
         font-weight: bold;
-        padding-left: 6px;
       }
 
-
-      .create-post-space-lastline {
+      .post-space-icons-container {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 8px;
-      }
-
-      .create-post-icons {
-        width: 250px;
-      }
-
-      .create-post-icon {
-        width: 16px;
-        padding-left: 16px;
+        margin: 10px;
       }
 
       .post-button {
-        padding: 8px 18px;
-        border: none;
-        border-radius: 20px;
-        background-color: rgb(3, 121, 211);
+        background-color: rgb(29, 155, 240);
         color: white;
-        margin:  12px 200px 12px;
+        width: 66px;
+        height: 36px;
+        border: none;
+        border-radius: 40px;
+        margin-left: 140px;
       }
 
-      .content-space {
-        background-color: black;
-        border-top: 1px solid  rgb(47, 51, 54);
+      /*--------------------------------------Right----------------------------------------------- */
 
+      .right-container {
+        position: relative;
+        top: 0;
+        bottom: 0;
+        left: 698px;
+      }
+
+      .search-bar {
+        width: 288px;
+        height: 58px;
+      }
+
+      .subscribe-container {
+        width: 260px;
+        height: 140px;
+        border: 1px solid rgb(47, 51, 54);
+        border-radius: 10px;
+        padding: 14px;
+      }
+
+      .subscribe-to-premium {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+
+      .subscribe-text {
+        font-size: 13px;
+      }
+
+      .subscribe-button {
+        background-color: rgb(29, 155, 240);
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        width: 106px;
+        height: 36px;
+        border: none;
+        border-radius: 40px;
+        margin: 4px;
+      }
+
+      .whats-happening-container {
+        width: 260px;
+        height: 438px;
+        border: 1px solid rgb(47, 51, 54);
+        border-radius: 10px;
+        margin-top: 20px;
+        padding: 14px;
+      }
+
+      .whats-happening {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .whats-happening-top-content {
+        display: flex;
+        margin-top: 10px;
+      }
+      .whats-happening-top-img {
+        width: 68px;
+        margin-right: 10px;
+      }
+
+      .whats-happening-top-content p,
+      .whats-happening-content-container p {
+        font-size: 12px;
+        color: gray;
+        line-height: 20px;
+      }
+
+      .whats-happening-top-content span,
+      .whats-happening-content-container span {
+        font-size: 14px;
+        color: white;
+      }
+
+      .whats-happening-content-container {
+        margin: 20px 0;
+      }
+
+      .show-more {
+        font-size: 12px;
+        color: rgb(29, 155, 240);
+      }
+
+      .who-to-follow-container {
+        border: 1px solid rgb(47, 51, 54);
+        border-radius: 10px;
+        margin-top: 20px;
+        padding: 14px;
       }
     </style>
   </head>
   <body>
-    <div class="conteiner">
-      <div class="sidebar">sidebar</div>
+    <div class="outer-container">
+      <div class="sidebar">
+        <div class="sidebar-icons">
+          <img class="sidebar-icon" src="関数アイコン1.svg" />
+          <img class="sidebar-icon" src="家のアイコン素材.svg" />
+          <img class="sidebar-icon" src="サーチアイコン.svg" />
+          <img class="sidebar-icon" src="クリスマスベルの無料アイコン2.svg" />
+          <img class="sidebar-icon" src="メールの無料アイコン.svg" />
+          <img class="sidebar-icon" src="台風のフリー素材.svg" />
+          <img class="sidebar-icon" src="人物アイコンチーム.svg" />
+          <img class="sidebar-icon" src="関数アイコン1.svg" />
+          <img class="sidebar-icon" src="人物アイコン.svg" />
+          <img class="sidebar-icon" src="おこづかいアイコン4.svg" />
+          <img class="sidebar-icon-special" src="プラスマイナスアイコン.svg" />
+        </div>
+        <div class="sidebar-user-icon"></div>
+      </div>
       <div class="center-container">
         <div class="top-bar">
-          <button class="top-button">For you</button>
-          <button class="top-button">Following</button>
+          <button class="foryou">For you</button>
+          <button class="following">Following</button>
         </div>
-        <div class="create-post-space">
-          <img class="user-icon" src="人物ボタン.svg">
-          <div class="create-post-rightspace">
-            <p>What is happening?!</p>
-            <div class="everyone-can-reply-line">
-              <img class="create-post-icon" src="地球の無料アイコン10.svg">
-              <p>Everyone can reply</p>
-            </div>
-          <div class="create-post-space-lastline">
-            <div class="create-post-icons">
-              <a><img class="create-post-icon" src="写真のフリーアイコン5.svg"></a>
-              <a><img class="create-post-icon" src="BDアイコン.svg"></a>
-              <a><img class="create-post-icon" src="メニューの無料アイコン9.svg"></a>
-              <a><img class="create-post-icon" src="喜怒哀楽うれしい.svg"></a>
-              <a><img class="create-post-icon" src="カレンダーのフリーアイコン16.svg"></a>
-              <a><img class="create-post-icon" src="マップのピンアイコン.svg"></a>
-            </div>
-            <button class="post-button">Post</button>
+        <div class="post-container">
+          <div class="post-box-icon-container">
+            <img class="post-box-user-icon" src="人物ボタン.svg" />
           </div>
+          <div class="post-box">
+            <div class="post-box-text">What is happening?!</div>
+            <div class="everyone-can-reply-container">
+              <img class="earth-icon" src="地球の無料アイコン10.svg" />
+              <p>Everyon can reply</p>
+            </div>
+            <div class="post-space-icons-container">
+              <div class="post-space-icons">
+                <img class="post-space-icon" src="写真のフリーアイコン5.svg" />
+                <img class="post-space-icon" src="BDアイコン.svg" />
+                <img
+                  class="post-space-icon"
+                  src="メニューの無料アイコン9.svg"
+                />
+                <img class="post-space-icon" src="喜怒哀楽うれしい.svg" />
+                <img
+                  class="post-space-icon"
+                  src="カレンダーのフリーアイコン16.svg"
+                />
+                <img class="post-space-icon" src="マップのピンアイコン.svg" />
+              </div>
+              <button class="post-button">Post</button>
+            </div>
           </div>
-            
         </div>
-        <div class="content-space">content-space</div>
+        <div class="content-container">Main contents</div>
       </div>
-      <div class="right-space">right-space</div>
+      <div class="right-container">
+        <div class="search-bar">
+          <input type="text" placeholder="Search" />
+        </div>
+        <div class="subscribe-container">
+          <div class="subscribe-to-premium">Subscribe to Premium</div>
+          <p class="subscribe-text">
+            Subscribe to unlock new features and if eligible, receive a share of
+            ads revenue.
+          </p>
+          <button class="subscribe-button">Subscribe</button>
+        </div>
+        <div class="whats-happening-container">
+          <div class="whats-happening">What's happening</div>
+          <div class="whats-happening-top-content">
+            <img class="whats-happening-top-img" src="サッカースタジアム1.svg"/>
+            <p class="whats-happening-top-text">
+              <span>Borussia Dortmund vs Real Madrid</span> <br>UEFA Champions League · LIVE
+            </p>
+          </div>
+          <div class="whats-happening-contents">
+            <div class="whats-happening-content-container">
+              <p class="whats-happening-content">
+                Politics · Trending<br><span> #ElectionResults</span><br> 131K posts
+              </p>
+            </div>
+            <div class="whats-happening-content-container">
+              <p class="whats-happening-content">
+                Entertainment · Trending<br><span>Godzilla Minus One</span><br> 34.5K posts
+              </p>
+            </div>
+            <div class="whats-happening-content-container">
+              <p class="whats-happening-content">
+                Politics · Trending<br><span>#ExitPoll</span><br> 425K posts
+              </p>
+            </div>
+          </div>
+          <p class="show-more">Show more</p>
+        </div>
+        <div class="who-to-follow-container">
+          <div class="who-to-follow">Who to follow</div>
+          <div class="who-to-follow-content-container">
+            <img class="who-to-follow-img" />
+            <div class="who-to-follow-text"></div>
+            <button class="who-to-follow-button">Follow</button>
+          </div>
+          <div class="who-to-follow">Who to follow</div>
+          <div class="who-to-follow-content-container">
+            <img class="who-to-follow-img" />
+            <div class="who-to-follow-text"></div>
+            <button class="who-to-follow-button">Follow</button>
+          </div>
+          <div class="who-to-follow">Who to follow</div>
+          <div class="who-to-follow-content-container">
+            <img class="who-to-follow-img" />
+            <div class="who-to-follow-text"></div>
+            <button class="who-to-follow-button">Follow</button>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
