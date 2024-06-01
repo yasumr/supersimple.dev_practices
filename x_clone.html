@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>X clone</title>
+    <style>
+      body {
+        height: 3000px;
+        margin: 0;
+        position: relative;
+        color: white;
+      }
+
+      .center-container {
+        background-color: lightblue;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 598px;
+        margin: 54px 0 0 70px;
+      }
+      .sidebar {
+        position: fixed;
+        background-color: black;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 70px;
+        border-right: 1px solid rgb(47, 51, 54);
+        border-top: 1px solid rgb(47, 51, 54);
+        z-index: 100;
+      }
+
+      .top-bar {
+        background-color: black;
+        position: fixed;
+        top: 0;
+        left: 70px;
+        height: 54px;
+        width: 598px;
+        border-bottom: 1px solid rgb(47, 51, 54);
+        display: flex;
+      }
+
+      .center-container {
+        position: absolute;
+        background-color: black;
+        top: 54;
+        bottom: 0;
+        left: 70;
+        right: 0;
+        z-index: -1;
+      }
+
+      .top-button {
+        width: 50%;
+        border: none;
+        background-color: black;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+      }
+
+      .create-post-space {
+        background-color: black;
+        position: relative;
+        top: 0;
+        left: 70;
+        height: 157px;
+        z-index: -1;
+        display: flex;
+        align-items: center;
+      }
+      
+      .create-post-rightspace > p {
+        color: rgb(100, 100, 101);
+        font-size: 20px;
+        padding: 40px 0 0 10px;
+      }
+
+      .user-icon {
+        width: 40px;
+        height: 100%;
+        margin: -20px 0px 54px 10px;
+      }
+
+      .everyone-can-reply-line {
+        display: flex;
+        border-bottom: 1px solid  rgb(47, 51, 54);
+      }
+
+      .everyone-can-reply-line p {
+        color: rgb(29, 155, 240);
+        font-size: 12px;
+        font-weight: bold;
+        padding-left: 6px;
+      }
+
+
+      .create-post-space-lastline {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+      }
+
+      .create-post-icons {
+        width: 250px;
+      }
+
+      .create-post-icon {
+        width: 16px;
+        padding-left: 16px;
+      }
+
+      .post-button {
+        padding: 8px 18px;
+        border: none;
+        border-radius: 20px;
+        background-color: rgb(3, 121, 211);
+        color: white;
+        margin:  12px 200px 12px;
+      }
+
+      .content-space {
+        background-color: black;
+        border-top: 1px solid  rgb(47, 51, 54);
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="conteiner">
+      <div class="sidebar">sidebar</div>
+      <div class="center-container">
+        <div class="top-bar">
+          <button class="top-button">For you</button>
+          <button class="top-button">Following</button>
+        </div>
+        <div class="create-post-space">
+          <img class="user-icon" src="人物ボタン.svg">
+          <div class="create-post-rightspace">
+            <p>What is happening?!</p>
+            <div class="everyone-can-reply-line">
+              <img class="create-post-icon" src="地球の無料アイコン10.svg">
+              <p>Everyone can reply</p>
+            </div>
+          <div class="create-post-space-lastline">
+            <div class="create-post-icons">
+              <a><img class="create-post-icon" src="写真のフリーアイコン5.svg"></a>
+              <a><img class="create-post-icon" src="BDアイコン.svg"></a>
+              <a><img class="create-post-icon" src="メニューの無料アイコン9.svg"></a>
+              <a><img class="create-post-icon" src="喜怒哀楽うれしい.svg"></a>
+              <a><img class="create-post-icon" src="カレンダーのフリーアイコン16.svg"></a>
+              <a><img class="create-post-icon" src="マップのピンアイコン.svg"></a>
+            </div>
+            <button class="post-button">Post</button>
+          </div>
+          </div>
+            
+        </div>
+        <div class="content-space">content-space</div>
+      </div>
+      <div class="right-space">right-space</div>
+    </div>
+  </body>
+</html>
