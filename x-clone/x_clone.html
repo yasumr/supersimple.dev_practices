@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>X clone</title>
+    <script src="https://kit.fontawesome.com/e1b03a91c0.js" crossorigin="anonymous"></script>
+    <style>
+      *, *::before, *::after {
+        box-sizing: border-box;
+      }
+      
+      body {
+        height: 3000px;
+        margin: 0;
+        background-color: black;
+        color: white;
+      }
+
+      .outer-container {
+        display: flex;
+        background-color: black;
+        width: 60px;
+        height: 100%;
+      }
+
+      /*--------------------------------------Left----------------------------------------------- */
+      .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 60px;
+        border-right: 1px solid rgb(47, 51, 54);
+      }
+
+      .sidebar-icon {
+        display: flex;
+        margin: 30px 20px;
+      }
+
+      .sidebar-icon {
+        width: 26px;
+      }
+
+      .sidebar-icon-special {
+        width: 50px;
+        background-color: rgb(29, 155, 240);
+        margin: 6px;
+      }
+
+      /*--------------------------------------center----------------------------------------------- */
+
+      .center-container {
+        position: absolute;
+        top: 0;
+        left: 61px;
+        height: 100%;
+        width: 598px;
+        background-color: black;
+        border-right: 1px solid rgb(47, 51, 54);
+      }
+
+      .top-bar {
+        display: flex;
+        height: 54px;
+        border-bottom: 1px solid rgb(47, 51, 54);
+      }
+
+      .top-bar button {
+        border: none;
+        background-color: black;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        width: 50%;
+      }
+
+      .foryou:hover,
+      .following:hover {
+        background-color: rgb(32, 32, 32);
+        transition: background-color 0.15s;
+        cursor: pointer;
+      }
+
+      .post-container {
+        display: flex;
+        height: 120px;
+        border-bottom: 1px solid rgb(47, 51, 54);
+      }
+
+      .post-box {
+        padding: 14px;
+      }
+
+      .post-box-user-icon {
+        width: 40px;
+        margin: 20px 0 0 16px;
+        cursor: pointer;
+      }
+
+      .post-box-text {
+        height: 40px;
+        color: rgb(114, 117, 118);
+        font-size: 19px;
+        margin: 12px 0 0 0px;
+      }
+
+      /* .everyone-can-reply-container {
+        display: flex;
+        height: 30px;
+        align-items: center;
+        border-bottom: 1px solid rgb(47, 51, 54);
+      } */
+
+      .post-box-icons-button-container {
+        display: flex;
+        justify-content: space-between;
+        width: 520px;
+        padding: 8px;
+      }
+
+      .earth-icon,
+      .post-space-icon {
+        width: 16px;
+        margin: 6px;
+        cursor: pointer;
+      }
+
+      /* .everyone-can-reply-container p {
+        color: rgb(29, 155, 240);
+        font-size: 12px;
+        font-weight: bold;
+      } */
+
+      .post-space-icons-container {
+        display: flex;
+        margin: 10px;
+      }
+
+      .post-button {
+        position: relative;
+        background-color: rgb(29, 155, 240);
+        color: white;
+        width: 66px;
+        height: 36px;
+        border: none;
+        border-radius: 40px;
+      }
+
+      /*--------------------------------------Right----------------------------------------------- */
+
+      .right-container {
+        position: relative;
+        top: 0;
+        bottom: 0;
+        left: 698px;
+      }
+
+      .search-bar {
+        width: 288px;
+        height: 58px;
+      }
+
+      .subscribe-container {
+        width: 288px;
+        height: 164px;
+        border: 1px solid rgb(47, 51, 54);
+        border-radius: 10px;
+        padding: 12px 16px;
+      }
+
+      .subscribe-to-premium {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+
+      .subscribe-text {
+        font-size: 13px;
+        margin: 0;
+      }
+
+      .subscribe-button {
+        background-color: rgb(29, 155, 240);
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        width: 106px;
+        height: 36px;
+        border: none;
+        border-radius: 40px;
+        margin: 8px 0;
+      }
+
+      .whats-happening-container {
+        width: 288px;
+        height: 438px;
+        border: 1px solid rgb(47, 51, 54);
+        border-radius: 10px;
+        margin-top: 20px;
+        padding: 14px;
+      }
+
+      .whats-happening {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .whats-happening-top-content {
+        display: flex;
+        margin-top: 10px;
+      }
+      .whats-happening-top-img {
+        width: 68px;
+        height: 68px;
+        border-radius: 10px;
+        margin: 10px;
+      }
+
+      .whats-happening-top-content p,
+      .whats-happening-content-container p {
+        font-size: 12px;
+        color: gray;
+        line-height: 20px;
+      }
+
+      .whats-happening-top-content span,
+      .whats-happening-content-container span {
+        font-size: 14px;
+        color: white;
+      }
+
+      .whats-happening-content-container {
+        height: 58px;
+        margin: 12px 0;
+      }
+
+      .show-more {
+        font-size: 12px;
+        color: rgb(29, 155, 240);
+        width: 256px;
+        height: 20px;
+        padding: 16px;
+        margin: 0;
+      }
+
+      .who-to-follow-container {
+        border: 1px solid rgb(47, 51, 54);
+        border-radius: 10px;
+        margin-top: 20px;
+        padding: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer-container">
+      <div class="sidebar">
+        <div class="sidebar-icons">
+          <img class="sidebar-icon" src="関数アイコン1.svg" />
+          <img class="sidebar-icon" src="家のアイコン素材.svg" />
+          <img class="sidebar-icon" src="サーチアイコン.svg" />
+          <img class="sidebar-icon" src="クリスマスベルの無料アイコン2.svg" />
+          <img class="sidebar-icon" src="メールの無料アイコン.svg" />
+          <img class="sidebar-icon" src="台風のフリー素材.svg" />
+          <img class="sidebar-icon" src="人物アイコンチーム.svg" />
+          <img class="sidebar-icon" src="関数アイコン1.svg" />
+          <img class="sidebar-icon" src="人物アイコン.svg" />
+          <img class="sidebar-icon" src="おこづかいアイコン4.svg" />
+          <img class="sidebar-icon-special" src="プラスマイナスアイコン.svg" />
+        </div>
+        <div class="sidebar-user-icon"></div>
+      </div>
+      <div class="center-container">
+        <div class="top-bar">
+          <button class="foryou">For you</button>
+          <button class="following">Following</button>
+        </div>
+        <div class="post-container">
+          <div class="post-box-icon-container">
+            <img class="post-box-user-icon" src="人物ボタン.svg" />
+          </div>
+          <div class="post-box">
+            <div class="post-box-text">What is happening?!</div>
+            <!-- <div class="everyone-can-reply-container">
+              <img class="earth-icon" src="地球の無料アイコン10.svg" />
+              <p>Everyon can reply</p>
+            </div> -->
+            <div class="post-box-icons-button-container">
+              <div class="post-space-icons-container">
+                <div class="post-space-icons">
+                  <img class="post-space-icon" src="写真のフリーアイコン5.svg" />
+                  <img class="post-space-icon" src="BDアイコン.svg" />
+                  <img
+                    class="post-space-icon"
+                    src="メニューの無料アイコン9.svg"
+                  />
+                  <img class="post-space-icon" src="喜怒哀楽うれしい.svg" />
+                  <img
+                    class="post-space-icon"
+                    src="カレンダーのフリーアイコン16.svg"
+                  />
+                  <img class="post-space-icon" src="マップのピンアイコン.svg" />
+                </div>
+              </div>
+              <div class="post-button-container">
+                <button class="post-button">Post</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-container">Main contents</div>
+      </div>
+      <div class="right-container">
+        <div class="search-bar">
+          <input type="text" placeholder="Search" />
+        </div>
+        <div class="subscribe-container">
+          <div class="subscribe-to-premium">Subscribe to Premium</div>
+          <p class="subscribe-text">
+            Subscribe to unlock new features and if eligible, receive a share of
+            ads revenue.
+          </p>
+          <button class="subscribe-button">Subscribe</button>
+        </div>
+        <div class="whats-happening-container">
+          <div class="whats-happening">What's happening</div>
+          <div class="whats-happening-top-content">
+            <img class="whats-happening-top-img" src="QLA7J_WA.jpeg"/>
+            <p class="whats-happening-top-text">
+              <span>Borussia Dortmund vs Real Madrid</span> <br>UEFA Champions League · LIVE
+            </p>
+          </div>
+          <div class="whats-happening-contents">
+            <div class="whats-happening-content-container">
+              <p class="whats-happening-content">
+                Politics · Trending<br><span> #ElectionResults</span><br> 131K posts
+              </p>
+              <i class="fa-light fa-ellipsis" style="color: #71767b;"></i>
+            </div>
+            <div class="whats-happening-content-container">
+              <p class="whats-happening-content">
+                Entertainment · Trending<br><span>Godzilla Minus One</span><br> 34.5K posts
+              </p>
+            </div>
+            <div class="whats-happening-content-container">
+              <p class="whats-happening-content">
+                Politics · Trending<br><span>#ExitPoll</span><br> 425K posts
+              </p>
+            </div>
+          </div>
+          <p class="show-more">Show more</p>
+        </div>
+        <div class="who-to-follow-container">
+          <div class="who-to-follow">Who to follow</div>
+          <div class="who-to-follow-content-container">
+            <img class="who-to-follow-img" />
+            <div class="who-to-follow-text"></div>
+            <button class="who-to-follow-button">Follow</button>
+          </div>
+          <div class="who-to-follow">Who to follow</div>
+          <div class="who-to-follow-content-container">
+            <img class="who-to-follow-img" />
+            <div class="who-to-follow-text"></div>
+            <button class="who-to-follow-button">Follow</button>
+          </div>
+          <div class="who-to-follow">Who to follow</div>
+          <div class="who-to-follow-content-container">
+            <img class="who-to-follow-img" />
+            <div class="who-to-follow-text"></div>
+            <button class="who-to-follow-button">Follow</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
